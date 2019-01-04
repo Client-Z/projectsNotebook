@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import { signUp } from '../../store/actions/authActions'
 import { connect } from 'react-redux'
 
 class SignUp extends Component {
@@ -16,6 +17,7 @@ class SignUp extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
+    this.props.signUp(this.state);
     console.log(this.state);
   }
   render() {
@@ -56,4 +58,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(SignUp)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signUp: (newUser) => dispatch(signUp(newUser))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp)
