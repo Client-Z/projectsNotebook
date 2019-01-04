@@ -4,12 +4,12 @@ import 'firebase/auth';
 
 // Replace this with your own config details
 var config = {
-  apiKey: "AIzaSyDo2HauU6PtL3PY6KthXdpIUzbDV908avo",
-  authDomain: "marioplan-files.firebaseapp.com",
-  databaseURL: "https://marioplan-files.firebaseio.com",
-  projectId: "marioplan-files",
-  storageBucket: "marioplan-files.appspot.com",
-  messagingSenderId: "1011174152626"
+  apiKey: "AIzaSyDFnxPsY3Ew0GFCaViwmhC3LRxKFyvZ5sE",
+  authDomain: "projects-notebook.firebaseapp.com",
+  databaseURL: "https://projects-notebook.firebaseio.com",
+  projectId: "projects-notebook",
+  storageBucket: "projects-notebook.appspot.com",
+  messagingSenderId: "840849151818"
 };
 firebase.initializeApp(config);
 firebase.firestore().settings({ timestampsInSnapshots: true });
